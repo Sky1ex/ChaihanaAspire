@@ -16,7 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\ChaihanaForEmplyee\ChaihanaForEmplyee.csproj" />
-    <ProjectReference Include="..\..\WebApplication1\WebApplication1.csproj" />
+    <ProjectReference Include="..\..\Chaihana_MVC\WebApplication1.csproj" />
     <ProjectReference Include="..\AspireForChaihana.ServiceDefaults\AspireForChaihana.ServiceDefaults.csproj" />
   </ItemGroup>
 

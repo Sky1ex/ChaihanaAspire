@@ -6,9 +6,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireForChaihana.AppHost",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireForChaihana.ServiceDefaults", "AspireForChaihana.ServiceDefaults\AspireForChaihana.ServiceDefaults.csproj", "{256D46F1-0A7E-4000-8097-F062352E53D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "..\WebApplication1\WebApplication1.csproj", "{889C32D8-2348-4A15-9704-EBFB4E7D1882}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChaihanaForEmplyee", "..\ChaihanaForEmplyee\ChaihanaForEmplyee.csproj", "{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "..\Chaihana_MVC\WebApplication1.csproj", "{F7105AD0-3C40-4079-A857-735A1A1F7951}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,14 +24,14 @@ Global
 		{256D46F1-0A7E-4000-8097-F062352E53D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256D46F1-0A7E-4000-8097-F062352E53D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{256D46F1-0A7E-4000-8097-F062352E53D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{889C32D8-2348-4A15-9704-EBFB4E7D1882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{889C32D8-2348-4A15-9704-EBFB4E7D1882}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{889C32D8-2348-4A15-9704-EBFB4E7D1882}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{889C32D8-2348-4A15-9704-EBFB4E7D1882}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7105AD0-3C40-4079-A857-735A1A1F7951}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7105AD0-3C40-4079-A857-735A1A1F7951}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7105AD0-3C40-4079-A857-735A1A1F7951}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7105AD0-3C40-4079-A857-735A1A1F7951}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
