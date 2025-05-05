@@ -65,3 +65,5 @@ volumes:
 команды для docker для БД: 
 PS C:\Рабочая папка\3 курс 2 полугодие\Практика\WebApplication1\DataBase and more> docker cp DumbDb.sql webapplication1-db-1:/tmp/DumbDb.dump
 PS C:\Рабочая папка\3 курс 2 полугодие\Практика\WebApplication1\DataBase and more> docker-compose exec db pg_restore -U postgres -d WebDB -v /tmp/DumbDb.dump
+
+тестирование подветки
