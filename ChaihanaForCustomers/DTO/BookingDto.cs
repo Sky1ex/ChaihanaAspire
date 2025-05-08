@@ -1,5 +1,4 @@
-﻿using WebApplication1.Models;
-
+﻿
 namespace WebApplication1.DTO
 {
     public class BookingDto

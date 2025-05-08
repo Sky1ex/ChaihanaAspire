@@ -4,7 +4,6 @@ using System.Security.Claims;
 using WebApplication1.DataBase;
 using WebApplication1.DTO;
 using WebApplication1.Exceptions;
-using WebApplication1.Models;
 using WebApplication1.OtherClasses;
 using WebApplication1.Services;
 

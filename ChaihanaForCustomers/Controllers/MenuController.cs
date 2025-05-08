@@ -12,11 +12,9 @@ namespace WebApplication1.Controllers
     {
 
         private readonly MenuService _menuService;
-        private readonly ApplicationDbContext _context;
 
-        public MenuController(MenuService menuService, ApplicationDbContext context)
+        public MenuController(MenuService menuService)
         {
-            _context = context;
             _menuService = menuService;
         }
 
@@ -26,7 +24,7 @@ namespace WebApplication1.Controllers
             try
             {
                 // Получаем список продуктов
-                var products = await _context.Products.ToListAsync();
+                var products = await _menuService.GetProducts();
 
                 ViewBag.Categories = await _menuService.GetCategories();
 

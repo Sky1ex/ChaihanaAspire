@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication1.DataBase;
+using Npgsql;
 
 namespace WebApplication1.Repository.Default
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected readonly ApplicationDbContext _context;
+        protected readonly NpgsqlDataSource _context;
         private readonly DbSet<T> _dbSet;
 
-        public Repository(ApplicationDbContext context)
+        public Repository(NpgsqlDataSource context)
         {
             _context = context;
             _dbSet = context.Set<T>();

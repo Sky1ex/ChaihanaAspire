@@ -4,11 +4,12 @@ using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.DataBase;
 using System;
-using WebApplication1.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using WebApplication1.DataBase_and_more;
+using WebApplication1.Repository.Default;
+using AspireForChaihana.ServiceDefaults.Models.Customers;
 
 namespace WebApplication1.Controllers
 {
@@ -26,8 +27,7 @@ namespace WebApplication1.Controllers
 
         public async Task InvokeAsync(
         HttpContext context,
-        ApplicationDbContext dbContext,
-        IConfiguration config)
+        IConfiguration config, IUnitOfWork _unitOfWork)
         {
             // Проверяем куку
             var jwtToken = context.Request.Cookies["jwt_token"];
@@ -40,8 +40,8 @@ namespace WebApplication1.Controllers
                 var cart = new Cart { CartId = Guid.NewGuid() };
                 var user = new User { UserId = userId, Cart = cart };
 
-                await dbContext.Users.AddAsync(user);
-                await dbContext.SaveChangesAsync();
+                await _unitOfWork.Users.AddAsync(user);
+                await _unitOfWork.SaveChangesAsync();
 
                 // Устанавливаем новую куку с токеном
                 AuthOptions.SetJwtCookie(context, userId);

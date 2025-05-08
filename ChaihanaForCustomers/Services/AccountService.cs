@@ -1,11 +1,11 @@
-﻿using MapsterMapper;
+﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
 using WebApplication1.DataBase;
 using WebApplication1.DTO;
-using WebApplication1.Models;
 using WebApplication1.Repository.Default;
 
 namespace WebApplication1.Services

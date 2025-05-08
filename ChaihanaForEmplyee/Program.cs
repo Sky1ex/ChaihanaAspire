@@ -2,13 +2,15 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using ChaihanaForEmplyee.DataBase;
-using ChaihanaForEmplyee.DataBase_and_more;
+using WebApplication1.DataBase_and_more;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.AddNpgsqlDataSource(connectionName: "postgres-customer");
+builder.AddNpgsqlDataSource(connectionName: "postgres-cafe");
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 	.AddJwtBearer(options =>
@@ -34,14 +36,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 	});
 
 builder.Services.AddAuthorization();
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDbForEmployee")));
-builder.Services.ConfigureDbContext<ApplicationDbContext>(options => options.EnableSensitiveDataLogging(true));
-
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDB")));
-builder.Services.ConfigureDbContext<ApplicationDbContext>(options => options.EnableSensitiveDataLogging(true));
 
 builder.Services.AddHttpContextAccessor();
 

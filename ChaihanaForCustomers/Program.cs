@@ -18,10 +18,10 @@ using MapsterMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using WebApplication1.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddServiceDefaults();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -59,13 +59,19 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddAuthorization();
 
+// Закончил здесь
+builder.Services.AddSingleton<KafkaProducerService>();
+
+// Регистрация DbContext для сотрудников
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.ConfigureDbContext<ApplicationDbContext>(options => options.EnableSensitiveDataLogging(true));
+builder.Services.AddDbContext<WebDbForCustomers>(options =>
+	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDbForCustomers")),
+    optionsLifetime: ServiceLifetime.Singleton);
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddDbContext<WebDbForCafe>(options =>
+	options.UseNpgsql(builder.Configuration.GetConnectionString("WebDbForCafe")),
+	optionsLifetime: ServiceLifetime.Singleton);
 
 // Добавляем маппер
 var config = new TypeAdapterConfig();
@@ -91,12 +97,6 @@ builder.Services.AddExceptionHandler<ExceptionHandler>(); // добавляем обработчи
 var app = builder.Build();
 
 app.UseCors("AllowAll");
-
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-    db.Database.Migrate(); // Создаст БД и применит миграции, если их нет
-}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -6,6 +6,9 @@ using Microsoft.Extensions.Logging;
 using OpenTelemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
+using WebApplication1.DataBase;
+using WebApplication1.DataBase_and_more;
+using WebApplication1.Repository.Default;
 
 namespace Microsoft.Extensions.Hosting;
 
@@ -16,9 +19,11 @@ public static class Extensions
 {
     public static IHostApplicationBuilder AddServiceDefaults(this IHostApplicationBuilder builder)
     {
-        builder.ConfigureOpenTelemetry();
 
-        builder.AddDefaultHealthChecks();
+		builder.ConfigureOpenTelemetry();
+		builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+		builder.AddDefaultHealthChecks();
 
         builder.Services.AddServiceDiscovery();
 

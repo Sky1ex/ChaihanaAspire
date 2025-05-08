@@ -1,5 +1,5 @@
-﻿using WebApplication1.DataBase;
-using WebApplication1.Models;
+﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
+using WebApplication1.DataBase;
 using WebApplication1.Repository.Default;
 
 namespace WebApplication1.Services
@@ -20,5 +20,11 @@ namespace WebApplication1.Services
             var categories = await _unitOfWork.Categories.GetAllAsync();
             return categories.ToList();
         }
-    }
+
+		public async Task<List<Product>> GetProducts()
+		{
+			var products = await _unitOfWork.Products.GetAllAsync();
+			return products.ToList();
+		}
+	}
 }

@@ -1,8 +1,8 @@
-﻿using MapsterMapper;
+﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.DataBase;
 using WebApplication1.DTO;
-using WebApplication1.Models;
 using WebApplication1.OtherClasses;
 using WebApplication1.Repository.Default;
 
@@ -14,7 +14,7 @@ namespace WebApplication1.Services
         private readonly ILogger<CartService> _logger;
         private readonly IMapper _mapper;
 
-        public BookingService(ApplicationDbContext context, ILogger<CartService> logger, IUnitOfWork unitOfWork, IMapper mapper)
+        public BookingService(ILogger<CartService> logger, IUnitOfWork unitOfWork, IMapper mapper)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;

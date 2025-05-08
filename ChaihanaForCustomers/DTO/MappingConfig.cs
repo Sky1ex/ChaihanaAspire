@@ -1,9 +1,10 @@
-﻿using Mapster;
-using WebApplication1.Models;
+﻿using AspireForChaihana.ServiceDefaults.Models.Cafe;
+using AspireForChaihana.ServiceDefaults.Models.Customers;
+using Mapster;
 
 namespace WebApplication1.DTO
 {
-	public class MappingConfig : IRegister
+    public class MappingConfig : IRegister
 	{
 		public void Register(TypeAdapterConfig config)
 		{

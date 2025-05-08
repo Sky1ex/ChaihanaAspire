@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using WebApplication1.DataBase;
 using WebApplication1.DTO;
 using WebApplication1.Exceptions;
-using WebApplication1.Models;
 using WebApplication1.OtherClasses;
 using WebApplication1.Services;
 
@@ -12,13 +11,11 @@ namespace WebApplication1.Controllers
     public class BookingController : Controller
     {
         private readonly UserService _userService;
-        private readonly ApplicationDbContext _context;
         private readonly BookingService _bookingService;
 
-        public BookingController(UserService userService, ApplicationDbContext context, BookingService bookingService)
+        public BookingController(UserService userService, BookingService bookingService)
         {
             _userService = userService;
-            _context = context;
             _bookingService = bookingService;
         }
 

@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using AspireForChaihana.ServiceDefaults.Models.Customers;
+using FluentAssertions;
 using Mapster;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
@@ -6,7 +7,6 @@ using System.Linq;
 using System.Net;
 using WebApplication1.DataBase;
 using WebApplication1.DTO;
-using WebApplication1.Models;
 using WebApplication1.Repository;
 using WebApplication1.Repository.Default;
 
