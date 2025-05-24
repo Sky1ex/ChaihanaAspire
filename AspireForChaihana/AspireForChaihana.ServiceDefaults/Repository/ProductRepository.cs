@@ -5,11 +5,11 @@ using WebApplication1.Repository.Default;
 
 namespace WebApplication1.Repository
 {
-    public class ProductRepository : Repository<Product, WebDbForCustomers>, IDisposable
+    public class ProductRepository : Repository<Product, WebDbForCafe>, IDisposable
     {
         private bool disposed = false;
 
-        public ProductRepository(WebDbForCustomers context) : base(context) { }
+        public ProductRepository(WebDbForCafe context) : base(context) { }
 
 
         protected virtual void Dispose(bool disposing)

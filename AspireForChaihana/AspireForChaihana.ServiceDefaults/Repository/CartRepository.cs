@@ -29,7 +29,7 @@ namespace WebApplication1.Repository
         {
             return await _context.Carts
                 .Include(x => x.CartElement)
-                .ThenInclude(x => x.Product)
+                .ThenInclude(x => x.ProductId)
                 .FirstOrDefaultAsync(x => x.User.UserId == userId);
         }
 
@@ -38,7 +38,7 @@ namespace WebApplication1.Repository
             return await _context.Carts
                 .AsNoTracking()
                 .Include(x => x.CartElement)
-                .ThenInclude(x => x.Product)
+                .ThenInclude(x => x.ProductId)
                 .AsNoTracking()
                 .FirstOrDefaultAsync(x => x.User.UserId == userId);
         }

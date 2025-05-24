@@ -1,3 +1,4 @@
+using AspireForChaihana.ServiceDefaults.Repository.Default;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +22,9 @@ public static class Extensions
     {
 
 		builder.ConfigureOpenTelemetry();
-		builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+		builder.Services.AddScoped<IUnitOfWorkCustomers, UnitOfWorkCustomers>();
+		builder.Services.AddScoped<IUnitOfWorkCafe, UnitOfWorkCafe>();
 
 		builder.AddDefaultHealthChecks();
 

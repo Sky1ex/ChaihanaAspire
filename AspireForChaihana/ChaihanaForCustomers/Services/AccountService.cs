@@ -12,12 +12,12 @@ namespace WebApplication1.Services
 {
     public class AccountService : IAccountService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWorkCustomers _unitOfWork;
         private readonly ILogger<CartService> _logger;
         public static List<CodeDto> _codeList = new List<CodeDto>();
         private readonly IMapper _mapper;
 
-        public AccountService(ILogger<CartService> logger, IUnitOfWork unitOfWork, IMapper mapper)
+        public AccountService(ILogger<CartService> logger, IUnitOfWorkCustomers unitOfWork, IMapper mapper)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;

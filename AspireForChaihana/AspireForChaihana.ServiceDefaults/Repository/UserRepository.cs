@@ -42,7 +42,7 @@ namespace WebApplication1.Repository
             return await _context.Users
                 .Include(c => c.Orders)
                 .ThenInclude(ce => ce.OrderElement)
-                .ThenInclude(ced => ced.Product)
+                .ThenInclude(ced => ced.ProductId)
                 .Include(c => c.Orders)
                 .ThenInclude(ce => ce.Adress)
                 .FirstOrDefaultAsync(c => c.UserId == userId);

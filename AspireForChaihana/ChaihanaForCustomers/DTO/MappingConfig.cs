@@ -11,8 +11,8 @@ namespace WebApplication1.DTO
 
             // CartElement -> CartElementDto
             config.NewConfig<CartElement, CartElementDto>()
-                .Map(dest => dest.ProductId, src => src.Product.ProductId)
-                .Map(dest => dest.product, src => src.Product)
+                .Map(dest => dest.ProductId, src => src.ProductId)
+                /*.Map(dest => dest.product, src => src.Product)*/
                 .Map(dest => dest.Count, src => src.Count);
 
             // Product -> ProductDto
@@ -37,7 +37,7 @@ namespace WebApplication1.DTO
             // OrderElement -> OrderElementDto
             config.NewConfig<OrderElement, OrderElementDto>()
 				.Map(dest => dest.ProductId, src => src.OrderElementId)
-				.Map(dest => dest.Product, src => src.Product)
+				.Map(dest => dest.Product, src => src.ProductId)
 				.Map(dest => dest.Count, src => src.Count);
 
             // Booking -> BookingDto

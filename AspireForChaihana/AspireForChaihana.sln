@@ -3,12 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireForChaihana.AppHost", "AspireForChaihana.AppHost\AspireForChaihana.AppHost.csproj", "{9CDA3832-9E68-4ED7-BF0B-8A543C2CB9B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664} = {97C4C90B-61E2-44AB-81EA-CB52A3527664}
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4} = {D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspireForChaihana.ServiceDefaults", "AspireForChaihana.ServiceDefaults\AspireForChaihana.ServiceDefaults.csproj", "{256D46F1-0A7E-4000-8097-F062352E53D2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChaihanaForEmplyee", "..\ChaihanaForEmplyee\ChaihanaForEmplyee.csproj", "{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "ChaihanaForCustomers\WebApplication1.csproj", "{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "..\ChaihanaForCustomers\WebApplication1.csproj", "{BE3FBB97-9A6D-4DE9-AD8A-B59E57BFE8F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChaihanaForEmplyee", "ChaihanaForEmplyee\ChaihanaForEmplyee.csproj", "{97C4C90B-61E2-44AB-81EA-CB52A3527664}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,14 +28,14 @@ Global
 		{256D46F1-0A7E-4000-8097-F062352E53D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{256D46F1-0A7E-4000-8097-F062352E53D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{256D46F1-0A7E-4000-8097-F062352E53D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0D9B46C6-27B3-4A5B-8E8A-D2A904172EFE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE3FBB97-9A6D-4DE9-AD8A-B59E57BFE8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE3FBB97-9A6D-4DE9-AD8A-B59E57BFE8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE3FBB97-9A6D-4DE9-AD8A-B59E57BFE8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE3FBB97-9A6D-4DE9-AD8A-B59E57BFE8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58F12FE-6E05-4AE4-9083-AE8D5E94A3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97C4C90B-61E2-44AB-81EA-CB52A3527664}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

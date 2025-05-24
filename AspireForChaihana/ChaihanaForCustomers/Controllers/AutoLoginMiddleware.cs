@@ -27,7 +27,7 @@ namespace WebApplication1.Controllers
 
         public async Task InvokeAsync(
         HttpContext context,
-        IConfiguration config, IUnitOfWork _unitOfWork)
+        IConfiguration config, IUnitOfWorkCustomers _unitOfWork)
         {
             // Проверяем куку
             var jwtToken = context.Request.Cookies["jwt_token"];

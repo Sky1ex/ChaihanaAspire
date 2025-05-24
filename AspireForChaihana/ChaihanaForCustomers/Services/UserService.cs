@@ -14,11 +14,11 @@ namespace WebApplication1.OtherClasses
 {
     public class UserService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWorkCustomers _unitOfWork;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IMapper _mapper;
 
-        public UserService(IHttpContextAccessor httpContextAccessor, IUnitOfWork unitOfWork, IMapper mapper)
+        public UserService(IHttpContextAccessor httpContextAccessor, IUnitOfWorkCustomers unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
             _httpContextAccessor = httpContextAccessor;

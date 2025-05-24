@@ -10,11 +10,11 @@ namespace WebApplication1.Services
 {
     public class BookingService
     {
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWorkCustomers _unitOfWork;
         private readonly ILogger<CartService> _logger;
         private readonly IMapper _mapper;
 
-        public BookingService(ILogger<CartService> logger, IUnitOfWork unitOfWork, IMapper mapper)
+        public BookingService(ILogger<CartService> logger, IUnitOfWorkCustomers unitOfWork, IMapper mapper)
         {
             _logger = logger;
             _unitOfWork = unitOfWork;
